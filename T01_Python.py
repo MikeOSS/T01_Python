@@ -60,15 +60,15 @@ while (cont > 0):
     
 
     else:
-        if(num1==milhar and num2==cent and num3 == dez and num4 == unidade): # Tela de vitória direto1
-        cont = 0
-        print('\n' * 5)
-        print(' ' * 15 + "P Á R A B E N S ! ! !")
-        print("\n"* 5)
-        print(f'\t Você acertou o código: {t_milhar} {t_centena} {t_dezena} {t_unidade} \nem {cont_tentativas} tentativas')
-        print("\n" * 2)
-        print(' ' * 50 + "<<< tecle algo >>>")
-        input()
+        if (num1==milhar and num2==cent and num3 == dez and num4 == unidade): # Tela de vitória direto1
+            cont = 0
+            print('\n' * 5)
+            print(' ' * 15 + "P Á R A B E N S ! ! !")
+            print("\n"* 5)
+            print(f'\t Você acertou o código: {t_milhar} {t_centena} {t_dezena} {t_unidade} \nem {cont_tentativas} tentativas')
+            print("\n" * 2)
+            print(' ' * 50 + "<<< tecle algo >>>")
+            input()
 else:
     print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
