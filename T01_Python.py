@@ -39,23 +39,23 @@ while (cont > 0):
     tentativa = int(input('digite sua tentativa de código: '))
     # dividindo o número que usuário digitou
     t_milhar = tentativa // 1000
-    t_centena = (tentativa % 100) // 100
+    t_centena = (tentativa % 1000) // 100
     t_dezena = (tentativa % 100) // 10
     t_unidade = tentativa % 10 
     
     
-    if(tentativa == numero_ficticio): # Tela de vitória direto
+    if(tentativa == numero_ficticio): # Tela de vitória direto1
         cont = 0
         print('\n' * 5)
         print(' ' * 15 + "P Á R A B E N S ! ! !")
-        print("\n * 5")
-        print(f'\t Você acertou o código: {t_milhar} {t_centena} {t_dezena} {t_unidade} \nem {cont_tentativas} ...')
+        print("\n"* 5)
+        print(f'\t Você acertou o código: {t_milhar} {t_centena} {t_dezena} {t_unidade} \nem {cont_tentativas} tentativas')
         print("\n" * 2)
         print(' ' * 50 + "<<< tecle algo >>>")
         input()
 
     else: 
-        if(milhar == t_milhar and dez != t_dezena and cent != centena):
+        if(milhar == t_milhar and dez != t_dezena and cent != t_centena):
             print(f"{milhar} _ _ _")
         
 
