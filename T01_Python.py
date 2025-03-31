@@ -75,6 +75,5 @@ if(cont < 1):
     more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
     if(more1 == 1):
         cont = 10    
-        #cu do tenca
-        
+
     
