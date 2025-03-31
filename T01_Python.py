@@ -43,7 +43,11 @@ while (cont > 0):
     t_dezena = (tentativa % 100) // 10
     t_unidade = tentativa % 10 
     
-    
+    num1='_'
+    num2="_" 
+    num3="_"
+    num4="_"
+
     if(tentativa == numero_ficticio): # Tela de vitória direto1
         cont = 0
         print('\n' * 5)
@@ -55,12 +59,22 @@ while (cont > 0):
         input()
 
     else: 
-        if(milhar == t_milhar and dez != t_dezena and cent != t_centena):
-            print(f"{milhar} _ _ _")
-        
-
-
-    cont -= 1
+        if milhar == t_milhar:
+                num1=milhar
+        else:
+            if cent == t_centena:
+                num2 == cent
+            else: 
+                if dez == t_dezena:
+                    num3 == dez
+                else:
+                    if unidade == t_unidade:
+                        num4 == unidade
+                    else:
+                        print(f"{num1} {num2} {num3} {num4}")
+                            cont -= 1
+else:
+    print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
 if(cont < 1):
     more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
