@@ -49,18 +49,17 @@ while (cont > 0):
 
     if milhar == t_milhar:
         num1=milhar    
-        if cent == t_centena:
-            num2 == cent
-            if dez == t_dezena:
-                num3 == dez
-                if unidade == t_unidade:
-                    num4 == unidade
-                    print(f"{num1} {num2} {num3} {num4}")
-                    cont -= 1
+    if cent == t_centena:
+        num2 == cent
+    if dez == t_dezena:
+        num3 == dez
+    if unidade == t_unidade:
+        num4 == unidade
     
-
-    else:
-        if (num1==milhar and num2==cent and num3 == dez and num4 == unidade): # Tela de vitória direto1
+    print(f"{num1} {num2} {num3} {num4}")
+    cont -= 1
+    
+    if (num1==milhar and num2==cent and num3 == dez and num4 == unidade): # Tela de vitória direto1
             cont = 0
             print('\n' * 5)
             print(' ' * 15 + "P Á R A B E N S ! ! !")
