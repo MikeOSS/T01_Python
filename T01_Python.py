@@ -34,19 +34,19 @@ cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
 while (cont > 0):
+    num1='_'
+    num2="_" 
+    num3="_"
+    num4="_"
     #contanto as tentativas:
     cont_tentativas += 1
-    tentativa = int(input('digite sua tentativa de código: '))
+    tentativa = int(input(f'digite sua tentativa de código:{num1} '))
     # dividindo o número que usuário digitou
     t_milhar = tentativa // 1000
     t_centena = (tentativa % 1000) // 100
     t_dezena = (tentativa % 100) // 10
     t_unidade = tentativa % 10 
     
-    num1='_'
-    num2="_" 
-    num3="_"
-    num4="_"
 
     if(tentativa == numero_ficticio): # Tela de vitória direto1
         cont = 0
@@ -72,7 +72,7 @@ while (cont > 0):
                         num4 == unidade
                     else:
                         print(f"{num1} {num2} {num3} {num4}")
-                            cont -= 1
+                        cont -= 1
 else:
     print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
