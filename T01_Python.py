@@ -48,13 +48,13 @@ while (cont > 0):
     t_unidade = tentativa % 10 
 
     if milhar == t_milhar:
-        num1=milhar    
+        num1 = milhar    
     if cent == t_centena:
-        num2 == cent
+        num2 = cent
     if dez == t_dezena:
-        num3 == dez
+        num3 = dez
     if unidade == t_unidade:
-        num4 == unidade
+        num4 = unidade
     
     print(f"{num1} {num2} {num3} {num4}")
     cont -= 1
