@@ -40,7 +40,7 @@ while (cont > 0):
     num4="_"
     #contanto as tentativas:
     cont_tentativas += 1
-    tentativa = int(input(f'digite sua tentativa de código:{num1} '))
+    tentativa = int(input(f'digite sua tentativa de código:'))
     # dividindo o número que usuário digitou
     t_milhar = tentativa // 1000
     t_centena = (tentativa % 1000) // 100
@@ -60,19 +60,19 @@ while (cont > 0):
 
     else: 
         if milhar == t_milhar:
-                num1=milhar
-        else:
-            if cent == t_centena:
-                num2 == cent
-            else: 
-                if dez == t_dezena:
-                    num3 == dez
-                else:
-                    if unidade == t_unidade:
-                        num4 == unidade
-                    else:
-                        print(f"{num1} {num2} {num3} {num4}")
-                        cont -= 1
+            num1=milhar
+            
+        if cent == t_centena:
+            num2 == cent
+
+        if dez == t_dezena:
+            num3 == dez
+
+        if unidade == t_unidade:
+            num4 == unidade
+
+        print(f"{num1} {num2} {num3} {num4}")
+        cont -= 1
 else:
     print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
