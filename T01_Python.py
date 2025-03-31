@@ -3,7 +3,7 @@ import random
 # gerando número aleatório e separando por partes:
 # numero_secreto = random.randint(1000, 9999)
 
-# primeiro = numero_secreto //1000
+#  = numero_secreto //1000
 # segundo= (numero_secreto % 1000)//100
 # terceiro= (numero_secreto % 1000) // 10
 # quarto = (numero_secreto % 1000) % 10
@@ -75,4 +75,6 @@ if(cont < 1):
     more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
     if(more1 == 1):
         cont = 10    
+        #cu do tenca
+        
     
