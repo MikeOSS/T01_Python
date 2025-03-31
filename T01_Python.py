@@ -59,7 +59,7 @@ while (cont > 0):
     print(f"{num1} {num2} {num3} {num4}")
     cont -= 1
     
-    if (t_milhar == milhar and t_centena==cent and t_dezena == dez and t_unidade == unidade): # Tela de vitória direto1
+    if (t_milhar==milhar and t_centena==cent and t_dezena==dez and t_unidade==unidade): # Tela de vitória direto1
             cont = 0
             print('\n' * 5)
             print(' ' * 15 + "P Á R A B E N S ! ! !")
