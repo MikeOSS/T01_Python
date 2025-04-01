@@ -29,24 +29,25 @@ milhar = numero_ficticio // 1000
 cent = (numero_ficticio % 1000) // 100 
 dez = (numero_ficticio % 100)// 10
 unidade = (numero_ficticio) % 10
-
+#alguns contadores
 cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
 while (cont > 0):
+    #tracinhos originais
     num1='_'
     num2="_" 
     num3="_"
     num4="_"
     #contanto as tentativas:
     cont_tentativas += 1
-    tentativa = int(input(f'digite sua tentativa de código:'))
+    tentativa = int(input(f'digite sua tentativa de código: '))
     # dividindo o número que usuário digitou
     t_milhar = tentativa // 1000
     t_centena = (tentativa % 1000) // 100
     t_dezena = (tentativa % 100) // 10
     t_unidade = tentativa % 10 
-
+    #colocando os números que o usuário acertou nos tracinhos:
     if milhar == t_milhar:
         num1 = milhar    
     if cent == t_centena:
@@ -55,19 +56,20 @@ while (cont > 0):
         num3 = dez
     if unidade == t_unidade:
         num4 = unidade
-    
-    print(f"{num1} {num2} {num3} {num4}")
     cont -= 1
-    
-    if (t_milhar==milhar and t_centena==cent and t_dezena==dez and t_unidade==unidade): # Tela de vitória direto1
-            cont = 0
-            print('\n' * 5)
-            print(' ' * 15 + "P Á R A B E N S ! ! !")
-            print("\n"* 5)
-            print(f'\t Você acertou o código: {t_milhar} {t_centena} {t_dezena} {t_unidade} \nem {cont_tentativas} tentativas')
-            print("\n" * 2)
-            print(' ' * 50 + "<<< tecle algo >>>")
-            input()
+    # Tela de vitória direto1
+    if (t_milhar==milhar and t_centena==cent and t_dezena==dez and t_unidade==unidade): 
+        cont = 0
+        print('\n' * 5)
+        print(' ' * 15 + "P Á R A B E N S ! ! !")
+        print("\n"* 5)
+        print(f'\t Você acertou o código: {t_milhar} {t_centena} {t_dezena} {t_unidade} \nem {cont_tentativas} tentativas')
+        print("\n" * 2)
+        print(' ' * 50 + "<<< tecle algo >>>")
+        input()
+    else:
+        print(f"Faltam {cont} tentativas...\n")
+        print(f"Seu código é: {num1} {num2} {num3} {num4}")
 else:
     print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
