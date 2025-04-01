@@ -21,7 +21,7 @@ print("\n" * 2)
 print("Você tem 10 tentativas para acertar o número secreto entre [1000 e 9999] \nA partir da 5a. tentativa o jogo irá te ajudar, dando dicas")
 print(" " * 20 + "<<< Tecle Algo >>>")
 input()
-
+num_de_jogadas=1
 #Tela principal 
 numero_ficticio = 4789 # número padrão para pensarmos em como fazer dps com o random
 # divisão dos números:
@@ -29,37 +29,36 @@ milhar = numero_ficticio // 1000
 cent = (numero_ficticio % 1000) // 100 
 dez = (numero_ficticio % 100)// 10
 unidade = (numero_ficticio) % 10
-
 cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
-while (cont > 0):
-    num1='_'
-    num2="_" 
-    num3="_"
-    num4="_"
-    #contanto as tentativas:
-    cont_tentativas += 1
-    tentativa = int(input(f'digite sua tentativa de código:'))
-    # dividindo o número que usuário digitou
-    t_milhar = tentativa // 1000
-    t_centena = (tentativa % 1000) // 100
-    t_dezena = (tentativa % 100) // 10
-    t_unidade = tentativa % 10 
-
-    if milhar == t_milhar:
-        num1 = milhar    
-    if cent == t_centena:
-        num2 = cent
-    if dez == t_dezena:
-        num3 = dez
-    if unidade == t_unidade:
-        num4 = unidade
-    
-    print(f"{num1} {num2} {num3} {num4}")
-    cont -= 1
-    
-    if (t_milhar==milhar and t_centena==cent and t_dezena==dez and t_unidade==unidade): # Tela de vitória direto1
+while num_de_jogadas>0:
+    while (cont > 0):
+        num1='_'
+        num2="_" 
+        num3="_"
+        num4="_"
+        #contando as tentativas:
+        tentativa = int(input(f'digite sua tentativa de código:'))
+        cont_tentativas += 1
+        # dividindo o número que usuário digitou
+        t_milhar = tentativa // 1000
+        t_centena = (tentativa % 1000) // 100
+        t_dezena = (tentativa % 100) // 10
+        t_unidade = tentativa % 10 
+        # faz o numero aparecer na tela quando acertado
+        if milhar == t_milhar:
+            num1 = milhar    
+        if cent == t_centena:
+            num2 = cent
+        if dez == t_dezena:
+            num3 = dez
+        if unidade == t_unidade:
+            num4 = unidade
+        print(f"\n\t{num1} {num2} {num3} {num4}\n\t\tfaltam {cont} tentativas\n")
+        cont -= 1
+        # quando acertou o numero 
+        if (t_milhar==milhar and t_centena==cent and t_dezena==dez and t_unidade==unidade):
             cont = 0
             print('\n' * 5)
             print(' ' * 15 + "P Á R A B E N S ! ! !")
@@ -68,11 +67,17 @@ while (cont > 0):
             print("\n" * 2)
             print(' ' * 50 + "<<< tecle algo >>>")
             input()
-else:
-    print(f"acabaram as tentativas")
+    else:
+        print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
-if(cont < 1):
-    more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
-    if(more1 == 1):
-        cont = 10    
-    
+    if(cont < 1):
+        more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
+        if(more1 == 1):
+            num_de_jogadas +=1
+            cont = 10    
+            cont_tentativas = 0
+        elif (more1 == 2):
+            num_de_jogadas = 0
+else:
+    print("fim de jogo")
+     
