@@ -55,8 +55,19 @@ while (cont > 0):
         num3 = dez
     if unidade == t_unidade:
         num4 = unidade
-    
-    print(f"{num1} {num2} {num3} {num4}")
+    tentativa2= input('digite um número: ')
+    contador_algarismo = 0
+    for a in tentativa2:
+        for b in range(4):
+            prox = numero_ficticio
+            if(prox > 0):
+                algarismo = prox % 10
+                prox = prox // 10
+            else:
+                break
+            if(a == algarismo ):
+                contador_algarismo += 1
+
     cont -= 1
     
     if (t_milhar==milhar and t_centena==cent and t_dezena==dez and t_unidade==unidade): # Tela de vitória direto1
@@ -68,6 +79,14 @@ while (cont > 0):
             print("\n" * 2)
             print(' ' * 50 + "<<< tecle algo >>>")
             input()
+    else:
+        print('\n')
+        if(contador_algarismo > 0):
+            print(f"Você acertou {cont_algarismos}")
+        else:
+            print("Você não acertou nenhum algarismo")
+        print(f' Faltam {cont} tentativas...\n')
+        print(f"Seu código é: {num1} {num2} {num3} {num4}")
 else:
     print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
