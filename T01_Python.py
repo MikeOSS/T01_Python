@@ -46,10 +46,6 @@ while num_de_jogadas > 0:
         # Tentativa de fazer o programa não reconhecer numeros fora do escopo e letras digitadas!
         if (tentativa < 1000 or tentativa > 9999):
             print('Você precisa digitar um número entre 1000 e 9999!')
-        if (tentativa != type(int)):
-            print('Você precisa digitar um numero!')
-            print("<<<tecle algo>>>")
-            input()
         cont_tentativas += 1
         # dividindo o número que usuário digitou
         t_milhar = tentativa // 1000
@@ -87,11 +83,11 @@ while num_de_jogadas > 0:
             # verificando se u usuário acertou algum algarismo
             if (cont_algarismos > 0):
                 print(f'Você acertou {cont_algarismos} algarismos!')
+                cont_algarismos = 0
             else:
                 print('Você não acertou nenhum algarismo. continue tentando!')
             print('\n')
-            print(
-                f"\n\t{num1} {num2} {num3} {num4}\n\t\tfaltam {cont} tentativas\n")
+            print(f"\n\t{num1} {num2} {num3} {num4}\n\t\tfaltam {cont} tentativas\n")
     else:
         print(f"acabaram as tentativas")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
