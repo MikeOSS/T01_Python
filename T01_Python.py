@@ -44,8 +44,19 @@ while num_de_jogadas > 0:
         # contando as tentativas:
         tentativa = int(input(f'digite sua tentativa de código: '))
         # Tentativa de fazer o programa não reconhecer numeros fora do escopo e letras digitadas!
-        if (tentativa < 1000 or tentativa > 9999):
-            print('Você precisa digitar um número entre 1000 e 9999!')
+        while (tentativa < 1000 or tentativa > 9999):
+            print('\t\t\t A T E N Ç Ã O!!\n')
+            print('\t\tDigite um número válido entre 1000 e 9999!!\n')
+            print('\t\t\t<<<tecle algo>>>')
+            input()
+            tentativa = int(input(f'digite sua tentativa de código: '))
+        while (not int(tentativa)):
+            print('\t\t\t A T E N Ç Ã O!!\n')
+            print('\t\tDigite apenas números!!!\n')
+            print('\t\t\t<<<tecle algo>>>')
+            input()
+            tentativa = int(input(f'digite sua tentativa de código: '))
+
         cont_tentativas += 1
         # dividindo o número que usuário digitou
         t_milhar = tentativa // 1000
@@ -64,7 +75,7 @@ while num_de_jogadas > 0:
             num3 = dez
         if unidade == t_unidade:
             cont_algarismos += 1
-            num4 = unidade
+            num4 = unidade  # PROBLEMA : QUANDO COLOCO SÓ O 9 ELE RECONHECE COMO ÚLTIMO ALGARISMO!
 
         cont -= 1
         # quando acertou o numero
@@ -79,17 +90,19 @@ while num_de_jogadas > 0:
             print(' ' * 50 + "<<< tecle algo >>>")
             input()
         else:
-            print('\n')
             # verificando se u usuário acertou algum algarismo
             if (cont_algarismos > 0):
                 print(f'Você acertou {cont_algarismos} algarismos!')
                 cont_algarismos = 0
             else:
-                print('Você não acertou nenhum algarismo. continue tentando!')
+                print('\nVocê não acertou nenhum algarismo. continue tentando!')
             print('\n')
-            print(f"\n\t{num1} {num2} {num3} {num4}\n\t\tfaltam {cont} tentativas\n")
+            print(
+                f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont} tentativas\n")
     else:
-        print(f"acabaram as tentativas")
+        print(f"acabaram as tentativas\n")
+        print('Você não consguiu acertar!\n')
+        print(f"O código era {numero_ficticio}\n")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
     if (cont < 1):
         more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
