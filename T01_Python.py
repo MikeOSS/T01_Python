@@ -34,7 +34,7 @@ unidade = (numero_ficticio) % 10
 cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
-
+cont_falt = 4 - cont_algarismos
 
 while num_de_jogadas > 0:
     while (cont > 0):
@@ -99,7 +99,7 @@ while num_de_jogadas > 0:
                 print('\nVocê não acertou nenhum algarismo. continue tentando!')
             print('\n')
             print(
-                f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {4 - cont_algarismos} algarismos e {cont} tentativas\n")
+                f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
     else:
         print(f"acabaram as tentativas\n")
         print('Você não consguiu acertar!\n')
