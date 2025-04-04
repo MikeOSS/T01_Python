@@ -115,3 +115,4 @@ while num_de_jogadas > 0:
             num_de_jogadas = 0
 else:
     print("fim de jogo")
+
