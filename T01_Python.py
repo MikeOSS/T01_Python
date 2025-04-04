@@ -35,6 +35,7 @@ cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
 
+
 while num_de_jogadas > 0:
     while (cont > 0):
         num1 = '_'
