@@ -100,6 +100,7 @@ while num_de_jogadas > 0:
             dica4 = "o quarto numero é menor ou igual a 5"
         elif unidade>=5:
             dica4 = "o quarto numero é maior que 5"
+
         # quando acertou o numero
         if (t_milhar == milhar and t_centena == cent and t_dezena == dez and t_unidade == unidade):
             cont = 0
@@ -122,6 +123,7 @@ while num_de_jogadas > 0:
             print('\n')
             print(f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
         elif cont<=5:
+            #resuldado com dicas
             print('\n')
             print(f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
             if num1 == "_":
