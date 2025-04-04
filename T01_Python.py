@@ -18,8 +18,7 @@ import random
 print("\n" * 5)
 print(" " * 10 + "=> Bem vindo Ao Jogo SECRETO!!! <=")
 print("\n" * 2)
-print(
-    "Você tem 10 tentativas para acertar o número secreto entre [1000 e 9999] \nA partir da 5a. tentativa o jogo irá te ajudar, dando dicas")
+print("Você tem 10 tentativas para acertar o número secreto entre [1000 e 9999] \nA partir da 5a. tentativa o jogo irá te ajudar, dando dicas")
 print(" " * 20 + "<<< Tecle Algo >>>")
 input()
 num_de_jogadas = 1
