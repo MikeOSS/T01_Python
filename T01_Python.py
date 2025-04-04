@@ -34,7 +34,6 @@ unidade = (numero_ficticio) % 10
 cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
-cont_falt = 4 - cont_algarismos
 
 while num_de_jogadas > 0:
     while (cont > 0):
@@ -77,7 +76,7 @@ while num_de_jogadas > 0:
         if unidade == t_unidade:
             cont_algarismos += 1
             num4 = unidade  # PROBLEMA : QUANDO COLOCO SÓ O 9 ELE RECONHECE COMO ÚLTIMO ALGARISMO!
-
+        cont_falt = 4 - cont_algarismos
         cont -= 1
         # quando acertou o numero
         if (t_milhar == milhar and t_centena == cent and t_dezena == dez and t_unidade == unidade):
