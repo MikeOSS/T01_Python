@@ -36,6 +36,28 @@ cont_tentativas = 0
 cont_algarismos = 0
 
 while num_de_jogadas > 0:
+    #gerador de dicas
+    dica1= 0
+    dica2= 0
+    dica3= 0
+    dica4= 0
+    if milhar<5:
+            dica1 = "o primeiro numero é menor ou igual a 5"
+    elif milhar>=5:
+            dica1 = "o primeiro numero é maior que 5"
+    if cent<5:
+            dica2 = "o segundo numero é menor ou igual a 5"
+    elif cent>=5:
+            dica2 = "o segundo numero é maior que 5"
+    if dez<=5:
+            dica3 = "o terceiro numero é menor ou igual a 5"
+    elif dez>=5:
+            dica3 = "o terceiro numero é maior que 5"
+    if unidade<5:
+            dica4 = "o quarto numero é menor ou igual a 5"
+    elif unidade>=5:
+            dica4 = "o quarto numero é maior que 5"
+
     while (cont > 0):
         num1 = '_'
         num2 = "_"
@@ -79,27 +101,6 @@ while num_de_jogadas > 0:
         #contador de numeros faltantes
         cont_falt = 4 - cont_algarismos
         cont -= 1
-        #gerador de dicas
-        dica1= 0
-        dica2= 0
-        dica3= 0
-        dica4= 0
-        if milhar<5:
-            dica1 = "o primeiro numero é menor ou igual a 5"
-        elif milhar>=5:
-            dica1 = "o primeiro numero é maior que 5"
-        if cent<5:
-            dica2 = "o segundo numero é menor ou igual a 5"
-        elif cent>=5:
-            dica2 = "o segundo numero é maior que 5"
-        if dez<=5:
-            dica3 = "o terceiro numero é menor ou igual a 5"
-        elif dez>=5:
-            dica3 = "o terceiro numero é maior que 5"
-        if unidade<5:
-            dica4 = "o quarto numero é menor ou igual a 5"
-        elif unidade>=5:
-            dica4 = "o quarto numero é maior que 5"
 
         # quando acertou o numero
         if (t_milhar == milhar and t_centena == cent and t_dezena == dez and t_unidade == unidade):
