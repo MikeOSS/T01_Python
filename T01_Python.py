@@ -79,6 +79,27 @@ while num_de_jogadas > 0:
         #contador de numeros faltantes
         cont_falt = 4 - cont_algarismos
         cont -= 1
+        #gerador de dicas
+        dica1= 0
+        dica2= 0
+        dica3= 0
+        dica4= 0
+        if t_milhar<=5:
+            dica1= "o primeiro numero é menor ou igual a 5"
+        elif t_milhar>5:
+            dica1= "o numero é maior que 5"
+        if t_centena<=5:
+            dica2= "o segundo numero é menor ou igual a 5"
+        elif t_centena>5:
+            dica2= "o numero é maior que 5"
+        if t_dezena<=5:
+            dica3= "o terceiro numero é menor ou igual a 5"
+        elif t_dezena>5:
+            dica3= "o numero é maior que 5"
+        if t_unidade<=5:
+            dica4= "o quarto numero é menor ou igual a 5"
+        elif t_unidade>5:
+            dica4= "o numero é maior que 5"
         # quando acertou o numero
         if (t_milhar == milhar and t_centena == cent and t_dezena == dez and t_unidade == unidade):
             cont = 0
@@ -91,15 +112,26 @@ while num_de_jogadas > 0:
             print(' ' * 50 + "<<< tecle algo >>>")
             input()
         else:
-            # verificando se u usuário acertou algum algarismo
+            # verificando se o usuário acertou algum algarismo
             if (cont_algarismos > 0):
                 print(f'Você acertou {cont_algarismos} algarismos!')
                 cont_algarismos = 0
             else:
-                print('\nVocê não acertou nenhum algarismo. continue tentando!')
+                 print('\nVocê não acertou nenhum algarismo. continue tentando!')
+        if cont>5:
             print('\n')
-            print(
-                f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
+            print(f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
+        elif cont<=5:
+            print('\n')
+            print(f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
+            if num1 == "_":
+                print(dica1)
+            elif num2 == "_":
+                print (dica2)
+            elif num3 == "_":
+                print(dica3)
+            elif num4 == "_":
+                print (dica4)
     else:
         print(f"acabaram as tentativas\n")
         print('Você não consguiu acertar!\n')
