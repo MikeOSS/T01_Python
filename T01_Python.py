@@ -141,7 +141,7 @@ while num_de_jogadas > 0:
         print(f"O código era {numero_ficticio}\n")
 # vendo se o jogador quer jogar mais uma vez dps de ter acabado as tentativas ou ter ganhado o jogo
     if (cont < 1):
-        more1 = int(input("jogar mais uma vez?? 1=SIM E 0=NÃO \n==>"))
+        more1 = int(input("jogar mais uma vez?? 1=SIM E 2=NÃO \n==>"))
         if (more1 == 1):
             num_de_jogadas += 1
             cont = 10
