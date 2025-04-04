@@ -87,19 +87,19 @@ while num_de_jogadas > 0:
         if milhar<5:
             dica1 = "o primeiro numero é menor ou igual a 5"
         elif milhar>=5:
-            dica1 = "o numero é maior que 5"
+            dica1 = "o primeiro numero é maior que 5"
         if cent<5:
             dica2 = "o segundo numero é menor ou igual a 5"
         elif cent>=5:
-            dica2 = "o numero é maior que 5"
+            dica2 = "o segundo numero é maior que 5"
         if dez<=5:
             dica3 = "o terceiro numero é menor ou igual a 5"
         elif dez>=5:
-            dica3 = "o numero é maior que 5"
+            dica3 = "o terceiro numero é maior que 5"
         if unidade<5:
             dica4 = "o quarto numero é menor ou igual a 5"
         elif unidade>=5:
-            dica4 = "o numero é maior que 5"
+            dica4 = "o quarto numero é maior que 5"
         # quando acertou o numero
         if (t_milhar == milhar and t_centena == cent and t_dezena == dez and t_unidade == unidade):
             cont = 0
