@@ -75,7 +75,8 @@ while num_de_jogadas > 0:
             num3 = dez
         if unidade == t_unidade:
             cont_algarismos += 1
-            num4 = unidade  # PROBLEMA : QUANDO COLOCO SÓ O 9 ELE RECONHECE COMO ÚLTIMO ALGARISMO!
+            num4 = unidade  # PROBLEMA : QUANDO COLOCO SÓ O 9 ELE RECONHECE COMO ÚLTIMO ALGARISMO!         
+        #contador de numeros faltantes
         cont_falt = 4 - cont_algarismos
         cont -= 1
         # quando acertou o numero
