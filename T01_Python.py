@@ -18,7 +18,8 @@ import random
 print("\n" * 5)
 print(" " * 10 + "=> Bem vindo Ao Jogo SECRETO!!! <=")
 print("\n" * 2)
-print("Você tem 10 tentativas para acertar o número secreto entre [1000 e 9999] \nA partir da 5a. tentativa o jogo irá te ajudar, dando dicas")
+print(
+    "Você tem 10 tentativas para acertar o número secreto entre [1000 e 9999] \nA partir da 5a. tentativa o jogo irá te ajudar, dando dicas")
 print(" " * 20 + "<<< Tecle Algo >>>")
 input()
 num_de_jogadas = 1
@@ -35,45 +36,13 @@ cont_tentativas = 0
 cont_algarismos = 0
 
 while num_de_jogadas > 0:
-    #gerador de dicas
-    dica1= 0
-    dica2= 0
-    dica3= 0
-    dica4= 0
-    if milhar<5:
-            dica1 = "o primeiro numero é menor ou igual a 5"
-    elif milhar>=5:
-            dica1 = "o primeiro numero é maior que 5"
-    if cent<5:
-            dica2 = "o segundo numero é menor ou igual a 5"
-    elif cent>=5:
-            dica2 = "o segundo numero é maior que 5"
-    if dez<=5:
-            dica3 = "o terceiro numero é menor ou igual a 5"
-    elif dez>=5:
-            dica3 = "o terceiro numero é maior que 5"
-    if unidade<5:
-            dica4 = "o quarto numero é menor ou igual a 5"
-    elif unidade>=5:
-            dica4 = "o quarto numero é maior que 5"
-
     while (cont > 0):
-        num1 = '_'
-        num2 = "_"
-        num3 = "_"
-        num4 = "_"
         # contando as tentativas:
         tentativa = int(input(f'digite sua tentativa de código: '))
         # Tentativa de fazer o programa não reconhecer numeros fora do escopo e letras digitadas!
         while (tentativa < 1000 or tentativa > 9999):
             print('\t\t\t A T E N Ç Ã O!!\n')
             print('\t\tDigite um número válido entre 1000 e 9999!!\n')
-            print('\t\t\t<<<tecle algo>>>')
-            input()
-            tentativa = int(input(f'digite sua tentativa de código: '))
-        while (not int(tentativa)):
-            print('\t\t\t A T E N Ç Ã O!!\n')
-            print('\t\tDigite apenas números!!!\n')
             print('\t\t\t<<<tecle algo>>>')
             input()
             tentativa = int(input(f'digite sua tentativa de código: '))
@@ -85,19 +54,31 @@ while num_de_jogadas > 0:
         t_dezena = (tentativa % 100) // 10
         t_unidade = tentativa % 10
         # faz o numero aparecer na tela quando acertado e conta os algarismos certos
+        print("\nSeu código é: ", end="")
         if milhar == t_milhar:
+            print(milhar, end=" ")
             cont_algarismos += 1
-            num1 = milhar
+        else:
+            print("_", end=" ")
+
         if cent == t_centena:
+            print(cent, end=" ")
             cont_algarismos += 1
-            num2 = cent
+        else:
+            print("_", end=" ")
+
         if dez == t_dezena:
+            print(dez, end=" ")
             cont_algarismos += 1
-            num3 = dez
+        else:
+            print("_", end=" ")
+
         if unidade == t_unidade:
+            print(unidade)
             cont_algarismos += 1
-            num4 = unidade  # PROBLEMA : QUANDO COLOCO SÓ O 9 ELE RECONHECE COMO ÚLTIMO ALGARISMO!         
-        #contador de numeros faltantes
+        else:
+            print("_")
+        # contador de numeros faltantes
         cont_falt = 4 - cont_algarismos
         cont -= 1
 
@@ -115,25 +96,42 @@ while num_de_jogadas > 0:
         else:
             # verificando se o usuário acertou algum algarismo
             if (cont_algarismos > 0):
-                print(f'Você acertou {cont_algarismos} algarismos!')
+                print(f'\nVocê acertou {cont_algarismos} algarismos!\n')
                 cont_algarismos = 0
             else:
-                 print('\nVocê não acertou nenhum algarismo. continue tentando!')
-        if cont>5:
+                print('\nVocê não acertou nenhum algarismo. continue tentando!')
+        if cont > 5:
+            print(
+                f"faltam {cont_falt} algarismos e {cont} tentativas\n")
+        elif cont <= 5:
+            # resuldado com dicas
+            if milhar != t_milhar:
+                if milhar < 5:
+                    print("\no primeiro dígito é menor ou igual a 5")
+                else:
+                    print("\no primeiro dígito é maior ou igual a 5")
+
+            if cent != t_centena:
+                if cent >= 5:
+                    print("\no segundo dígito é maior que 5")
+                else:
+                    print("\no segundo dígito é maior ou igual a 5")
+
+            if dez != t_dezena:
+                if dez < 5:
+                    print("\no terciro dígito é menor que 5")
+                else:
+                    print("\no terceiro dígito é maior ou igual a 5")
+
+            if unidade != t_unidade:
+                if unidade < 5:
+                    print("\no quarto dígito é menor que 5")
+                else:
+                    print("\no quarto dígito é maior ou igual a 5")
             print('\n')
-            print(f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
-        elif cont<=5:
-            #resuldado com dicas
-            print('\n')
-            print(f"\nSeu código é: {num1} {num2} {num3} {num4}\n\nfaltam {cont_falt} algarismos e {cont} tentativas\n")
-            if num1 == "_":
-                print(dica1)
-            elif num2 == "_":
-                print (dica2)
-            elif num3 == "_":
-                print(dica3)
-            elif num4 == "_":
-                print (dica4)
+            print(
+                f"faltam {cont_falt} algarismos e {cont} tentativas\n")
+
     else:
         print(f"acabaram as tentativas\n")
         print('Você não consguiu acertar!\n')
@@ -150,4 +148,3 @@ while num_de_jogadas > 0:
             num_de_jogadas = 0
 else:
     print("fim de jogo")
-
