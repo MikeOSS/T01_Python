@@ -65,15 +65,10 @@ while num_de_jogadas > 0:
         # contando as tentativas:
         tentativa = int(input(f'digite sua tentativa de código: '))
         # Tentativa de fazer o programa não reconhecer numeros fora do escopo e letras digitadas!
+             
         while (tentativa < 1000 or tentativa > 9999):
             print('\t\t\t A T E N Ç Ã O!!\n')
             print('\t\tDigite um número válido entre 1000 e 9999!!\n')
-            print('\t\t\t<<<tecle algo>>>')
-            input()
-            tentativa = int(input(f'digite sua tentativa de código: '))
-        while (not int(tentativa)):
-            print('\t\t\t A T E N Ç Ã O!!\n')
-            print('\t\tDigite apenas números!!!\n')
             print('\t\t\t<<<tecle algo>>>')
             input()
             tentativa = int(input(f'digite sua tentativa de código: '))
@@ -96,7 +91,7 @@ while num_de_jogadas > 0:
             num3 = dez
         if unidade == t_unidade:
             cont_algarismos += 1
-            num4 = unidade  # PROBLEMA : QUANDO COLOCO SÓ O 9 ELE RECONHECE COMO ÚLTIMO ALGARISMO!         
+            num4 = unidade       
         #contador de numeros faltantes
         cont_falt = 4 - cont_algarismos
         cont -= 1
