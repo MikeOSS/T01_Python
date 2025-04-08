@@ -30,6 +30,7 @@ while num_de_jogadas > 0:
         # contando as tentativas:
         tentativa = int(input(f'digite sua tentativa de código: '))
         # Tentativa de fazer o programa não reconhecer numeros fora do escopo e letras digitadas!
+
         while (tentativa < 1000 or tentativa > 9999):
             print('\t\t\t A T E N Ç Ã O!!\n')
             print('\t\tDigite um número válido entre 1000 e 9999!!\n')
