@@ -1,18 +1,12 @@
 import random
 
-# gerando número aleatório e separando por partes:
-# numero_secreto = random.randint(1000, 9999)
-
-# primeiro = numero_secreto //1000
-# segundo= (numero_secreto % 1000)//100
-# terceiro= (numero_secreto % 1000) // 10
-# quarto = (numero_secreto % 1000) % 10
-
-# print(numero_secreto)
-# print(primeiro)
-# print(segundo)
-# print(terceiro)
-# print(quarto)
+# gerando número aleatório
+numero_ficticio = random.randint(1000, 9999)
+# divisão dos números:
+milhar = numero_ficticio // 1000
+cent = (numero_ficticio % 1000) // 100
+dez = (numero_ficticio % 100) // 10
+unidade = (numero_ficticio) % 10
 
 # Tela inicial:
 print("\n" * 5)
@@ -24,12 +18,8 @@ print(" " * 20 + "<<< Tecle Algo >>>")
 input()
 num_de_jogadas = 1
 # Tela principal
-numero_ficticio = 4789  # número padrão para pensarmos em como fazer dps com o random
-# divisão dos números:
-milhar = numero_ficticio // 1000
-cent = (numero_ficticio % 1000) // 100
-dez = (numero_ficticio % 100) // 10
-unidade = (numero_ficticio) % 10
+
+
 # contadores
 cont = 10
 cont_tentativas = 0
