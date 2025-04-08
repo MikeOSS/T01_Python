@@ -25,6 +25,12 @@ cont = 10
 cont_tentativas = 0
 cont_algarismos = 0
 
+# checando os algarismos certos
+m_check = 0
+c_check = 0
+d_check = 0
+u_check = 0
+
 while num_de_jogadas > 0:
     while (cont > 0):
         # contando as tentativas:
@@ -45,26 +51,36 @@ while num_de_jogadas > 0:
         t_dezena = (tentativa % 100) // 10
         t_unidade = tentativa % 10
         # faz o numero aparecer na tela quando acertado e conta os algarismos certos
-        print("\nSeu código é: ", end="")
+
+        # mudando o valor da varável de checagem pra um caso os algarismos sejam iguais. de modo a sempre printar o algarismo certo quando for 1, mesmo quano o User digite errado dps de acertar
         if milhar == t_milhar:
+            m_check = 1
+        if cent == t_centena:
+            c_check = 1
+        if dez == t_dezena:
+            d_check = 1
+        if unidade == t_unidade:
+            u_check = 1
+        print("\nSeu código é: ", end="")
+        if m_check == 1:
             print(milhar, end=" ")
             cont_algarismos += 1
         else:
             print("_", end=" ")
 
-        if cent == t_centena:
+        if c_check == 1:
             print(cent, end=" ")
             cont_algarismos += 1
         else:
             print("_", end=" ")
 
-        if dez == t_dezena:
+        if d_check == 1:
             print(dez, end=" ")
             cont_algarismos += 1
         else:
             print("_", end=" ")
 
-        if unidade == t_unidade:
+        if u_check == 1:
             print(unidade)
             cont_algarismos += 1
         else:
@@ -90,35 +106,37 @@ while num_de_jogadas > 0:
                 print(f'\nVocê acertou {cont_algarismos} algarismos!\n')
                 cont_algarismos = 0
             else:
-                print('\nVocê não acertou nenhum algarismo. continue tentando!')
+                print('\nVocê não acertou nenhum algarismo. continue tentando!\n')
         if cont > 5:
             print(
                 f"faltam {cont_falt} algarismos e {cont} tentativas\n")
         elif cont <= 5:
             # resuldado com dicas
+
             if milhar != t_milhar:
                 if milhar < 5:
                     print("\no primeiro dígito é menor ou igual a 5")
                 else:
-                    print("\no primeiro dígito é maior ou igual a 5")
+                    print("\no primeiro dígito é maior ou igual a 5\n")
 
             if cent != t_centena:
                 if cent >= 5:
-                    print("\no segundo dígito é maior que 5")
-                else:
                     print("\no segundo dígito é maior ou igual a 5")
+                else:
+                    print("\no segundo dígito é menor que 5\n")
 
             if dez != t_dezena:
                 if dez < 5:
                     print("\no terciro dígito é menor que 5")
                 else:
-                    print("\no terceiro dígito é maior ou igual a 5")
+                    print("\no terceiro dígito é maior ou igual a 5\n")
 
             if unidade != t_unidade:
                 if unidade < 5:
                     print("\no quarto dígito é menor que 5")
                 else:
-                    print("\no quarto dígito é maior ou igual a 5")
+                    print("\no quarto dígito é maior ou igual a 5\n")
+
             print('\n')
             print(
                 f"faltam {cont_falt} algarismos e {cont} tentativas\n")
