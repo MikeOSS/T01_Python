@@ -113,25 +113,25 @@ while num_de_jogadas > 0:
         elif cont <= 5:
             # resuldado com dicas
 
-            if milhar != t_milhar:
+            if m_check != 1:
                 if milhar < 5:
                     print("\no primeiro dígito é menor ou igual a 5")
                 else:
-                    print("\no primeiro dígito é maior ou igual a 5\n")
+                    print("\no primeiro dígito é maior ou igual a 5")
 
-            if cent != t_centena:
+            if c_check != 1:
                 if cent >= 5:
                     print("\no segundo dígito é maior ou igual a 5")
                 else:
-                    print("\no segundo dígito é menor que 5\n")
+                    print("\no segundo dígito é menor que 5")
 
-            if dez != t_dezena:
+            if d_check != 1:
                 if dez < 5:
                     print("\no terciro dígito é menor que 5")
                 else:
-                    print("\no terceiro dígito é maior ou igual a 5\n")
+                    print("\no terceiro dígito é maior ou igual a 5")
 
-            if unidade != t_unidade:
+            if u_check != 1:
                 if unidade < 5:
                     print("\no quarto dígito é menor que 5")
                 else:
