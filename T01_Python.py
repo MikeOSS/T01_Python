@@ -153,6 +153,15 @@ while num_de_jogadas > 0:
             cont = 10
             cont_tentativas = 0
             cont_algarismos = 0
+            numero_ficticio = random.randint(1000, 9999)
+            milhar = numero_ficticio // 1000
+            cent = (numero_ficticio % 1000) // 100
+            dez = (numero_ficticio % 100) // 10
+            unidade = (numero_ficticio) % 10
+            m_check = 0
+            c_check = 0
+            d_check = 0
+            u_check = 0
         elif (more1 == 2):
             num_de_jogadas = 0
 else:
